@@ -23,10 +23,11 @@ export function Hero() {
           alt="Brilliant-cut natural diamond on matte black stone"
           width={1408}
           height={1200}
-          className="h-full w-full object-cover opacity-70"
+          className="h-full w-full object-cover opacity-95"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/85 to-background/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
+
       </motion.div>
 
       <motion.div
