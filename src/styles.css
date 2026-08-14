@@ -5,17 +5,16 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Design system definition.
+ * A.K. Diamonds design system — bright luxury editorial.
  *
- * The @theme inline block maps CSS custom properties to Tailwind utility
- * classes (e.g. --color-primary -> bg-primary, text-primary).
+ * COLORS: edit the values in :root below.
+ *   --background  warm ivory page background
+ *   --foreground  deep charcoal text
+ *   --primary     muted champagne / gold accent (kept intentionally subtle)
+ *   --ink         deep charcoal used for contrast ("dark") sections
  *
- * The :root and .dark blocks define the actual color values using oklch.
- * All colors MUST use oklch format.
- *
- * To add a new semantic color:
- * 1. Add the variable to :root (light value) and .dark (dark value)
- * 2. Register it in @theme inline as --color-<name>: var(--<name>)
+ * FONTS: change --font-display (serif headings) and --font-sans (body).
+ *   The font files are loaded via <link> in src/routes/__root.tsx.
  */
 
 @theme inline {
@@ -46,6 +45,9 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-sand: var(--sand);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -62,59 +64,51 @@
 }
 
 @theme {
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-sans: "Jost", ui-sans-serif, system-ui, sans-serif;
-  --color-gold: oklch(0.78 0.09 85);
-  --color-gold-deep: oklch(0.62 0.09 78);
-  --color-ink: oklch(0.13 0.004 60);
 }
 
 :root {
-  --radius: 0.25rem;
-  --background: oklch(0.14 0.004 70);
-  --foreground: oklch(0.95 0.008 85);
-  --card: oklch(0.175 0.005 70);
-  --card-foreground: oklch(0.95 0.008 85);
-  --popover: oklch(0.175 0.005 70);
-  --popover-foreground: oklch(0.95 0.008 85);
-  --primary: oklch(0.78 0.09 85);
-  --primary-foreground: oklch(0.14 0.004 70);
-  --secondary: oklch(0.22 0.006 70);
-  --secondary-foreground: oklch(0.95 0.008 85);
-  --muted: oklch(0.22 0.006 70);
-  --muted-foreground: oklch(0.7 0.012 80);
-  --accent: oklch(0.26 0.02 80);
-  --accent-foreground: oklch(0.88 0.06 85);
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.3 0.015 80 / 45%);
-  --input: oklch(0.3 0.015 80 / 55%);
-  --ring: oklch(0.78 0.09 85);
-  --chart-1: oklch(0.78 0.09 85);
-  --chart-2: oklch(0.62 0.09 78);
-  --chart-3: oklch(0.5 0.05 80);
-  --chart-4: oklch(0.4 0.03 80);
-  --chart-5: oklch(0.3 0.02 80);
-  --sidebar: oklch(0.175 0.005 70);
-  --sidebar-foreground: oklch(0.95 0.008 85);
-  --sidebar-primary: oklch(0.78 0.09 85);
-  --sidebar-primary-foreground: oklch(0.14 0.004 70);
-  --sidebar-accent: oklch(0.22 0.006 70);
-  --sidebar-accent-foreground: oklch(0.95 0.008 85);
-  --sidebar-border: oklch(0.3 0.015 80 / 45%);
-  --sidebar-ring: oklch(0.78 0.09 85);
+  --radius: 0.125rem;
+  --background: oklch(0.978 0.006 85);
+  --foreground: oklch(0.2 0.006 60);
+  --card: oklch(0.995 0.003 90);
+  --card-foreground: oklch(0.2 0.006 60);
+  --popover: oklch(0.995 0.003 90);
+  --popover-foreground: oklch(0.2 0.006 60);
+  --primary: oklch(0.63 0.055 78);
+  --primary-foreground: oklch(0.99 0.003 90);
+  --secondary: oklch(0.95 0.008 85);
+  --secondary-foreground: oklch(0.2 0.006 60);
+  --muted: oklch(0.952 0.008 85);
+  --muted-foreground: oklch(0.5 0.012 70);
+  --accent: oklch(0.93 0.015 85);
+  --accent-foreground: oklch(0.28 0.02 70);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.99 0.003 90);
+  --border: oklch(0.87 0.01 80);
+  --input: oklch(0.87 0.01 80);
+  --ring: oklch(0.63 0.055 78);
 
-  --gradient-gold: linear-gradient(
-    100deg,
-    oklch(0.62 0.09 78),
-    oklch(0.88 0.08 92),
-    oklch(0.68 0.09 80)
-  );
-  --shadow-lux: 0 30px 80px -40px oklch(0.78 0.09 85 / 35%);
-}
+  --ink: oklch(0.19 0.005 60);
+  --ink-foreground: oklch(0.96 0.006 85);
+  --sand: oklch(0.945 0.012 82);
 
-@theme inline {
-  --color-gold: var(--primary);
+  --chart-1: oklch(0.63 0.055 78);
+  --chart-2: oklch(0.72 0.04 82);
+  --chart-3: oklch(0.5 0.02 70);
+  --chart-4: oklch(0.8 0.02 80);
+  --chart-5: oklch(0.35 0.01 65);
+  --sidebar: oklch(0.995 0.003 90);
+  --sidebar-foreground: oklch(0.2 0.006 60);
+  --sidebar-primary: oklch(0.63 0.055 78);
+  --sidebar-primary-foreground: oklch(0.99 0.003 90);
+  --sidebar-accent: oklch(0.95 0.008 85);
+  --sidebar-accent-foreground: oklch(0.2 0.006 60);
+  --sidebar-border: oklch(0.87 0.01 80);
+  --sidebar-ring: oklch(0.63 0.055 78);
+
+  --shadow-soft: 0 24px 60px -40px oklch(0.3 0.02 70 / 45%);
 }
 
 @layer base {
@@ -126,52 +120,47 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
   }
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     font-family: var(--font-display);
     font-weight: 300;
+    letter-spacing: -0.01em;
   }
 
   ::selection {
-    background: oklch(0.78 0.09 85 / 30%);
+    background: oklch(0.63 0.055 78 / 22%);
+    color: var(--color-background);
   }
 }
 
-@utility text-gold-gradient {
-  background: var(--gradient-gold);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-@utility rule-gold {
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    oklch(0.78 0.09 85 / 70%),
-    transparent
-  );
-}
-
+/* Small uppercase label used above headings. */
 @utility eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.34em;
+  font-size: 0.68rem;
+  letter-spacing: 0.32em;
   text-transform: uppercase;
-  color: var(--color-muted-foreground);
+  color: var(--color-primary);
 }
 
-@utility surface-lux {
-  background:
-    linear-gradient(
-      180deg,
-      oklch(0.2 0.006 70 / 90%),
-      oklch(0.155 0.004 70 / 90%)
-    );
-  border: 1px solid oklch(0.78 0.09 85 / 14%);
+/* Hairline divider. */
+@utility rule-soft {
+  height: 1px;
+  background: var(--color-border);
 }
 
+/* Soft neutral card surface for product / content blocks. */
+@utility surface-soft {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+}
+
+/* Deep charcoal band for occasional contrast sections. */
+@utility section-ink {
+  background: var(--ink);
+  color: var(--ink-foreground);
+}
