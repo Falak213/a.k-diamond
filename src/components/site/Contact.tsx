@@ -1,5 +1,4 @@
 import { Mail, MapPin, Phone, Clock3 } from "lucide-react";
-import logo from "@/assets/logo.asset.json";
 import { COMPANY } from "@/content/site";
 import { Reveal, SectionHeading } from "./Reveal";
 
@@ -56,12 +55,12 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 text-center md:flex-row md:justify-between md:text-left">
         <div className="flex items-center gap-3">
           <img
-            src={logo.url}
+            src="/logo.svg"
             alt="A.K. Diamonds"
-            width={40}
+            width={52}
             height={40}
             loading="lazy"
-            className="h-10 w-10 rounded-sm object-cover"
+            className="h-10 w-[3.25rem] object-contain"
           />
           <span className="font-display text-sm tracking-[0.22em]">A.K. DIAMONDS</span>
         </div>
