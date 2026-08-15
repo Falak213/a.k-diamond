@@ -10,33 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as BookDemoRouteImport } from './routes/book-demo'
+import { Route as CatalogueRouteImport } from './routes/catalogue'
+import { Route as CertificationsRouteImport } from './routes/certifications'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DiamondsRouteImport } from './routes/diamonds'
+import { Route as LabGrownDiamondsRouteImport } from './routes/lab-grown-diamonds'
+import { Route as NaturalDiamondsRouteImport } from './routes/natural-diamonds'
+import { Route as ReviewsRouteImport } from './routes/reviews'
+import { Route as ShapesRouteImport } from './routes/shapes'
+import { Route as WhyUsRouteImport } from './routes/why-us'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BookDemoRoute = BookDemoRouteImport.update({
+  id: '/book-demo',
+  path: '/book-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CatalogueRoute = CatalogueRouteImport.update({
+  id: '/catalogue',
+  path: '/catalogue',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CertificationsRoute = CertificationsRouteImport.update({
+  id: '/certifications',
+  path: '/certifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DiamondsRoute = DiamondsRouteImport.update({
+  id: '/diamonds',
+  path: '/diamonds',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LabGrownDiamondsRoute = LabGrownDiamondsRouteImport.update({
+  id: '/lab-grown-diamonds',
+  path: '/lab-grown-diamonds',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NaturalDiamondsRoute = NaturalDiamondsRouteImport.update({
+  id: '/natural-diamonds',
+  path: '/natural-diamonds',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReviewsRoute = ReviewsRouteImport.update({
+  id: '/reviews',
+  path: '/reviews',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShapesRoute = ShapesRouteImport.update({
+  id: '/shapes',
+  path: '/shapes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WhyUsRoute = WhyUsRouteImport.update({
+  id: '/why-us',
+  path: '/why-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-demo': typeof BookDemoRoute
+  '/catalogue': typeof CatalogueRoute
+  '/certifications': typeof CertificationsRoute
+  '/contact': typeof ContactRoute
+  '/diamonds': typeof DiamondsRoute
+  '/lab-grown-diamonds': typeof LabGrownDiamondsRoute
+  '/natural-diamonds': typeof NaturalDiamondsRoute
+  '/reviews': typeof ReviewsRoute
+  '/shapes': typeof ShapesRoute
+  '/why-us': typeof WhyUsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-demo': typeof BookDemoRoute
+  '/catalogue': typeof CatalogueRoute
+  '/certifications': typeof CertificationsRoute
+  '/contact': typeof ContactRoute
+  '/diamonds': typeof DiamondsRoute
+  '/lab-grown-diamonds': typeof LabGrownDiamondsRoute
+  '/natural-diamonds': typeof NaturalDiamondsRoute
+  '/reviews': typeof ReviewsRoute
+  '/shapes': typeof ShapesRoute
+  '/why-us': typeof WhyUsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/book-demo': typeof BookDemoRoute
+  '/catalogue': typeof CatalogueRoute
+  '/certifications': typeof CertificationsRoute
+  '/contact': typeof ContactRoute
+  '/diamonds': typeof DiamondsRoute
+  '/lab-grown-diamonds': typeof LabGrownDiamondsRoute
+  '/natural-diamonds': typeof NaturalDiamondsRoute
+  '/reviews': typeof ReviewsRoute
+  '/shapes': typeof ShapesRoute
+  '/why-us': typeof WhyUsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/book-demo'
+    | '/catalogue'
+    | '/certifications'
+    | '/contact'
+    | '/diamonds'
+    | '/lab-grown-diamonds'
+    | '/natural-diamonds'
+    | '/reviews'
+    | '/shapes'
+    | '/why-us'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/book-demo'
+    | '/catalogue'
+    | '/certifications'
+    | '/contact'
+    | '/diamonds'
+    | '/lab-grown-diamonds'
+    | '/natural-diamonds'
+    | '/reviews'
+    | '/shapes'
+    | '/why-us'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/book-demo'
+    | '/catalogue'
+    | '/certifications'
+    | '/contact'
+    | '/diamonds'
+    | '/lab-grown-diamonds'
+    | '/natural-diamonds'
+    | '/reviews'
+    | '/shapes'
+    | '/why-us'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BookDemoRoute: typeof BookDemoRoute
+  CatalogueRoute: typeof CatalogueRoute
+  CertificationsRoute: typeof CertificationsRoute
+  ContactRoute: typeof ContactRoute
+  DiamondsRoute: typeof DiamondsRoute
+  LabGrownDiamondsRoute: typeof LabGrownDiamondsRoute
+  NaturalDiamondsRoute: typeof NaturalDiamondsRoute
+  ReviewsRoute: typeof ReviewsRoute
+  ShapesRoute: typeof ShapesRoute
+  WhyUsRoute: typeof WhyUsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/book-demo': {
+      id: '/book-demo'
+      path: '/book-demo'
+      fullPath: '/book-demo'
+      preLoaderRoute: typeof BookDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/catalogue': {
+      id: '/catalogue'
+      path: '/catalogue'
+      fullPath: '/catalogue'
+      preLoaderRoute: typeof CatalogueRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/certifications': {
+      id: '/certifications'
+      path: '/certifications'
+      fullPath: '/certifications'
+      preLoaderRoute: typeof CertificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/diamonds': {
+      id: '/diamonds'
+      path: '/diamonds'
+      fullPath: '/diamonds'
+      preLoaderRoute: typeof DiamondsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/lab-grown-diamonds': {
+      id: '/lab-grown-diamonds'
+      path: '/lab-grown-diamonds'
+      fullPath: '/lab-grown-diamonds'
+      preLoaderRoute: typeof LabGrownDiamondsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/natural-diamonds': {
+      id: '/natural-diamonds'
+      path: '/natural-diamonds'
+      fullPath: '/natural-diamonds'
+      preLoaderRoute: typeof NaturalDiamondsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reviews': {
+      id: '/reviews'
+      path: '/reviews'
+      fullPath: '/reviews'
+      preLoaderRoute: typeof ReviewsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shapes': {
+      id: '/shapes'
+      path: '/shapes'
+      fullPath: '/shapes'
+      preLoaderRoute: typeof ShapesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/why-us': {
+      id: '/why-us'
+      path: '/why-us'
+      fullPath: '/why-us'
+      preLoaderRoute: typeof WhyUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BookDemoRoute: BookDemoRoute,
+  CatalogueRoute: CatalogueRoute,
+  CertificationsRoute: CertificationsRoute,
+  ContactRoute: ContactRoute,
+  DiamondsRoute: DiamondsRoute,
+  LabGrownDiamondsRoute: LabGrownDiamondsRoute,
+  NaturalDiamondsRoute: NaturalDiamondsRoute,
+  ReviewsRoute: ReviewsRoute,
+  ShapesRoute: ShapesRoute,
+  WhyUsRoute: WhyUsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,19 +1,20 @@
 import { Mail, MapPin, Phone, Clock3 } from "lucide-react";
 import logo from "@/assets/logo.asset.json";
+import { COMPANY } from "@/content/site";
 import { Reveal, SectionHeading } from "./Reveal";
 
-const DETAILS = [
-  {
-    icon: MapPin,
-    label: "Head office",
-    lines: ["Bharat Diamond Bourse, Tower B", "Bandra Kurla Complex, Mumbai 400051, India"],
-  },
-  { icon: Mail, label: "Export desk", lines: ["exports@akdiamonds.com", "sales@akdiamonds.com"] },
-  { icon: Phone, label: "Telephone", lines: ["+91 22 4000 8800", "+91 98200 11223 (WhatsApp)"] },
-  { icon: Clock3, label: "Trading hours", lines: ["Mon – Sat · 10:00 – 19:00 IST", "Global calls by appointment"] },
-];
-
 export function Contact() {
+  const DETAILS = [
+    {
+      icon: MapPin,
+      label: "Head office",
+      lines: COMPANY.address,
+    },
+    { icon: Mail, label: "Email", lines: COMPANY.emails },
+    { icon: Phone, label: "Telephone", lines: COMPANY.phones },
+    { icon: Clock3, label: "Trading hours", lines: COMPANY.hours },
+  ];
+
   return (
     <section id="contact" className="relative border-t border-border py-28 md:py-36">
       <div className="mx-auto max-w-7xl px-6">

@@ -7,28 +7,28 @@ const CS = [
     icon: Gem,
     title: "Carat",
     lead: "Weight, not size",
-    body: "One carat equals 0.20 grams. We supply calibrated melee from 0.005 ct through solitaires above 10 ct, sorted to exact sieve sizes for consistent manufacturing.",
+    body: "One carat equals 0.20 grams. Carat weight is the most objective of the four Cs — larger stones are rarer and command higher per-carat prices.",
     scale: ["0.50 ct", "1.00 ct", "2.00 ct", "3.00 ct"],
   },
   {
     icon: Droplets,
     title: "Clarity",
     lead: "IF to I3",
-    body: "Inclusions are graded under 10x magnification. Our standing inventory covers IF, VVS1–VVS2, VS1–VS2 and SI grades, with eye-clean guarantees on every SI parcel.",
+    body: "Inclusions and blemishes are graded under 10x magnification. Grades range from Flawless (IF) through VVS, VS, SI and Included.",
     scale: ["IF", "VVS", "VS", "SI"],
   },
   {
     icon: Palette,
     title: "Colour",
     lead: "D through Z",
-    body: "From icy colourless D–F, through near-colourless G–J, to faint and light yellow. Parcels are colour-matched under master stones before dispatch.",
+    body: "Diamond colour grading runs from D (colourless) to Z (light yellow). Colourless stones are the most valuable; many buyers prefer near-colourless G–J for value.",
     scale: ["D–F", "G–J", "K–M", "N–Z"],
   },
   {
     icon: Scissors,
     title: "Cut",
     lead: "Where fire is made",
-    body: "Proportion, symmetry and polish decide light return. Shallow and deep cuts leak light; we cut to Excellent and Ideal parameters as standard.",
+    body: "Proportion, symmetry and polish determine how light interacts with the stone. Cut is the single factor most under human control and the most important for brilliance.",
     scale: ["Ideal", "Excellent", "Very Good", "Good"],
   },
 ];
@@ -44,7 +44,7 @@ export function FourCs() {
               The four C&apos;s that <span className="text-gold-gradient">define value</span>
             </>
           }
-          subtitle="Every stone we export is graded against the same four criteria the world's laboratories use. Understanding them is how buyers compare parcels accurately."
+          subtitle="Every stone is graded against the same four criteria the world's laboratories use. Understanding them is how buyers compare parcels accurately."
         />
 
         <div className="mt-20 grid gap-6 md:grid-cols-2">

@@ -1,37 +1,7 @@
 import { motion } from "motion/react";
 import { Quote } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
-
-const REVIEWS = [
-  {
-    quote:
-      "Consistency is the whole game for us. Three years of melee parcels and the sieve sizes have never once come back off-spec.",
-    name: "Daniel Rosenfeld",
-    role: "Head of Sourcing",
-    company: "Antwerp Fine Jewels · Belgium",
-  },
-  {
-    quote:
-      "They quote fast, they document properly, and customs clearance has never stalled a shipment. That is rarer than it should be.",
-    name: "Priya Menon",
-    role: "Procurement Director",
-    company: "Aurum Manufacturing · Singapore",
-  },
-  {
-    quote:
-      "We moved our lab-grown programme to A.K. after one trial order. Colour matching across 400 stones was flawless.",
-    name: "Marcus Hale",
-    role: "Managing Partner",
-    company: "Hale & Co. Wholesale · United States",
-  },
-  {
-    quote:
-      "Genuine trade partners. They understand margins, lead times, and never compete with us at retail.",
-    name: "Sofia Almeida",
-    role: "Category Buyer",
-    company: "Lusitana Group · Portugal",
-  },
-];
+import { TESTIMONIALS } from "@/content/site";
 
 export function Testimonials() {
   return (
@@ -47,8 +17,8 @@ export function Testimonials() {
         />
 
         <div className="mt-20 grid gap-6 md:grid-cols-2">
-          {REVIEWS.map((r, i) => (
-            <Reveal key={r.name} delay={(i % 2) * 0.1}>
+          {TESTIMONIALS.map((r, i) => (
+            <Reveal key={i} delay={(i % 2) * 0.1}>
               <motion.figure
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 250, damping: 22 }}
@@ -56,7 +26,7 @@ export function Testimonials() {
               >
                 <Quote className="size-7 text-primary/70" strokeWidth={1.2} />
                 <blockquote className="mt-6 font-display text-xl leading-relaxed text-foreground/90 md:text-2xl">
-                  “{r.quote}”
+                  &ldquo;{r.quote}&rdquo;
                 </blockquote>
                 <figcaption className="mt-8 border-t border-border pt-6">
                   <p className="text-sm text-foreground">{r.name}</p>
