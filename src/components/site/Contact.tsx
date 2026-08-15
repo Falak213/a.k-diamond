@@ -1,19 +1,19 @@
 import { Mail, MapPin, Phone, Clock3 } from "lucide-react";
-import logo from "@/assets/logo.asset.json";
+import { COMPANY } from "@/content/site";
 import { Reveal, SectionHeading } from "./Reveal";
 
-const DETAILS = [
-  {
-    icon: MapPin,
-    label: "Head office",
-    lines: ["Bharat Diamond Bourse, Tower B", "Bandra Kurla Complex, Mumbai 400051, India"],
-  },
-  { icon: Mail, label: "Export desk", lines: ["exports@akdiamonds.com", "sales@akdiamonds.com"] },
-  { icon: Phone, label: "Telephone", lines: ["+91 22 4000 8800", "+91 98200 11223 (WhatsApp)"] },
-  { icon: Clock3, label: "Trading hours", lines: ["Mon – Sat · 10:00 – 19:00 IST", "Global calls by appointment"] },
-];
-
 export function Contact() {
+  const DETAILS = [
+    {
+      icon: MapPin,
+      label: "Head office",
+      lines: COMPANY.address,
+    },
+    { icon: Mail, label: "Email", lines: COMPANY.emails },
+    { icon: Phone, label: "Telephone", lines: COMPANY.phones },
+    { icon: Clock3, label: "Trading hours", lines: COMPANY.hours },
+  ];
+
   return (
     <section id="contact" className="relative border-t border-border py-28 md:py-36">
       <div className="mx-auto max-w-7xl px-6">
@@ -55,12 +55,12 @@ export function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-6 px-6 text-center md:flex-row md:justify-between md:text-left">
         <div className="flex items-center gap-3">
           <img
-            src={logo.url}
+            src="/logo.svg"
             alt="A.K. Diamonds"
-            width={40}
+            width={52}
             height={40}
             loading="lazy"
-            className="h-10 w-10 rounded-sm object-cover"
+            className="h-10 w-[3.25rem] object-contain"
           />
           <span className="font-display text-sm tracking-[0.22em]">A.K. DIAMONDS</span>
         </div>

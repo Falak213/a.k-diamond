@@ -54,7 +54,8 @@ export function ShapesShowcase() {
                     animate={{ opacity: 1, scale: 1, rotate: 0 }}
                     exit={{ opacity: 0, scale: 1.05, rotate: 4 }}
                     transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative w-full text-primary"
+                    className="relative w-full"
+                    whileHover={{ y: -8, rotate: 2.5, scale: 1.03 }}
                   >
                     <DiamondGlyph shape={shape} active className="h-auto w-full" />
                   </motion.div>
@@ -88,9 +89,13 @@ export function ShapesShowcase() {
                     transition={{ duration: 0.4 }}
                     className="flex items-center gap-6 rounded-sm border p-5 md:p-6"
                   >
-                    <div className="w-16 shrink-0 text-primary md:w-20">
+                    <motion.div
+                      className="w-16 shrink-0 md:w-20"
+                      whileHover={{ y: -8, rotate: i % 2 === 0 ? -4 : 4, scale: 1.08 }}
+                      transition={{ type: "spring", stiffness: 240, damping: 18 }}
+                    >
                       <DiamondGlyph shape={s} active={isActive} className="h-auto w-full" />
-                    </div>
+                    </motion.div>
                     <div className="min-w-0">
                       <div className="flex items-baseline gap-3">
                         <h3 className="text-2xl tracking-tight">{s.name}</h3>
