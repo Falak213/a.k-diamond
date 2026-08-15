@@ -114,7 +114,6 @@
   --sidebar-ring: oklch(0.75 0.065 82);
 
   --shadow-soft: 0 24px 60px -40px oklch(0 0 0 / 60%);
-  --shadow-lux: 0 16px 48px -24px oklch(0.75 0.065 82 / 12%);
 }
 
 @layer base {
@@ -179,12 +178,6 @@
 /* Soft neutral panel used for product/content sections */
 @utility surface-soft {
   background-color: var(--color-sand);
-}
-
-/* Subtle elevated card surface */
-@utility surface-lux {
-  background-color: var(--color-card);
-  box-shadow: var(--shadow-lux);
 }
 
 @utility rule-soft {

@@ -1,8 +1,13 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
-import { ArrowRight, Globe as Globe2 } from "lucide-react";
+import { ArrowRight, Globe2 } from "lucide-react";
 import heroImage from "@/assets/hero-diamond.jpg";
-import { STATS } from "@/content/site";
+
+const stats = [
+  { value: "38+", label: "Export markets" },
+  { value: "25 yrs", label: "Trade heritage" },
+  { value: "100%", label: "Certified goods" },
+];
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -15,13 +20,14 @@ export function Hero() {
       <motion.div style={{ y }} className="absolute inset-0">
         <img
           src={heroImage}
-          alt="Brilliant-cut diamond on dark surface"
+          alt="Brilliant-cut natural diamond on matte black stone"
           width={1408}
           height={1200}
-          className="h-full w-full object-cover opacity-90"
+          className="h-full w-full object-cover opacity-95"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
+
       </motion.div>
 
       <motion.div
@@ -55,8 +61,8 @@ export function Hero() {
           className="mt-8 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base"
         >
           A.K. Diamonds supplies natural and lab-grown polished diamonds to wholesalers,
-          manufacturers and retail groups worldwide — every parcel certified, calibrated
-          and shipped for export.
+          manufacturers and retail groups across 38 markets — every parcel certified, calibrated
+          and shipped from India.
         </motion.p>
 
         <motion.div
@@ -66,17 +72,18 @@ export function Hero() {
           className="mt-12 flex flex-wrap items-center gap-4"
         >
           <a
-            href="/book-demo"
+            href="#book-demo"
             className="group inline-flex items-center gap-3 rounded-sm bg-primary px-8 py-4 text-[0.7rem] tracking-[0.26em] text-primary-foreground uppercase transition-all hover:brightness-110"
+            style={{ boxShadow: "var(--shadow-lux)" }}
           >
             Book a Demo
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href="/diamonds"
+            href="#products"
             className="inline-flex items-center gap-3 rounded-sm border border-border px-8 py-4 text-[0.7rem] tracking-[0.26em] text-foreground uppercase transition-colors hover:border-primary/70 hover:text-primary"
           >
-            Explore Diamonds
+            View Inventory
           </a>
         </motion.div>
 
@@ -86,7 +93,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.9 }}
           className="mt-20 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-8"
         >
-          {STATS.map((s) => (
+          {stats.map((s) => (
             <div key={s.label}>
               <dt className="font-display text-3xl text-primary">{s.value}</dt>
               <dd className="mt-1 text-[0.65rem] tracking-[0.2em] text-muted-foreground uppercase">

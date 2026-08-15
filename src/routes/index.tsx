@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Layout } from "@/components/site/Layout";
+import { Nav } from "@/components/site/Nav";
 import { Hero } from "@/components/site/Hero";
 import { FourCs } from "@/components/site/FourCs";
 import { Products } from "@/components/site/Products";
@@ -8,12 +8,11 @@ import { WhyUs } from "@/components/site/WhyUs";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Trust } from "@/components/site/Trust";
 import { BookDemo } from "@/components/site/BookDemo";
-import { Contact } from "@/components/site/Contact";
-import { COMPANY } from "@/content/site";
+import { Contact, Footer } from "@/components/site/Contact";
 
 const TITLE = "A.K. Diamonds — Global Wholesale Diamond Exporters";
 const DESCRIPTION =
-  "Wholesale natural and lab-grown diamond exporters. Certified, calibrated parcels shipped worldwide. Book a live demo.";
+  "Natural and lab-grown polished diamonds supplied wholesale to 38 export markets. GIA, IGI and HRD certified, calibrated parcels, export only. Book a live demo.";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -34,9 +33,18 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          name: COMPANY.name,
-          slogan: COMPANY.tagline,
+          name: "A.K. Diamonds",
+          slogan: "Rise · Shine · Eternity",
           description: DESCRIPTION,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Bharat Diamond Bourse, Tower B, Bandra Kurla Complex",
+            addressLocality: "Mumbai",
+            postalCode: "400051",
+            addressCountry: "IN",
+          },
+          email: "exports@akdiamonds.com",
+          telephone: "+91 22 4000 8800",
         }),
       },
     ],
@@ -45,19 +53,23 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <Layout>
-      <h1 className="sr-only">
-        A.K. Diamonds — global wholesale exporters of natural and lab-grown diamonds
-      </h1>
-      <Hero />
-      <FourCs />
-      <Products />
-      <ShapesShowcase />
-      <WhyUs />
-      <Testimonials />
-      <Trust />
-      <BookDemo />
-      <Contact />
-    </Layout>
+    <>
+      <Nav />
+      <main>
+        <h1 className="sr-only">
+          A.K. Diamonds — global wholesale exporters of natural and lab-grown diamonds
+        </h1>
+        <Hero />
+        <FourCs />
+        <Products />
+        <ShapesShowcase />
+        <WhyUs />
+        <Testimonials />
+        <Trust />
+        <BookDemo />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }

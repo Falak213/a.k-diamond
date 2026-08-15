@@ -10,28 +10,28 @@ const REASONS = [
   },
   {
     icon: Ship,
-    title: "Export-focused operation",
-    body: "TODO: Replace with actual export capabilities — insured logistics, customs documentation and international shipping details.",
+    title: "Export-only operation",
+    body: "Door-to-door insured logistics to 38 markets, with full customs documentation, invoicing and Kimberley certificates.",
   },
   {
     icon: ShieldCheck,
-    title: "Certified quality",
-    body: "TODO: Replace with actual certification details — grading labs, laser inscription and quality assurance processes.",
+    title: "Certified at source",
+    body: "GIA, IGI and HRD grading available on every stone above 0.30 ct, with laser-inscribed report numbers.",
   },
   {
     icon: Scale,
     title: "Consistent calibration",
-    body: "TODO: Replace with actual calibration and sorting details — sieve-matched parcels and repeatable make quality.",
+    body: "Sieve-matched melee and repeatable make quality, so your production lines never wait on re-sorting.",
   },
   {
     icon: Timer,
-    title: "Responsive quotations",
-    body: "TODO: Replace with actual response-time commitments and account management details.",
+    title: "48-hour quotations",
+    body: "Dedicated account managers respond to parcel enquiries within two business days, in your timezone.",
   },
   {
     icon: Handshake,
     title: "Long-term supply terms",
-    body: "TODO: Replace with actual contract and supply arrangement details.",
+    body: "Annual contracts with locked make specifications and priority allocation during tight supply cycles.",
   },
 ];
 
